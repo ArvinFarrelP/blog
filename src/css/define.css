@@ -14,59 +14,147 @@
 
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
-/* You can override the default Infima variables here. */
+/* ===== DARK MODE VARIABLES (DEFAULT) ===== */
 :root {
-  /* docsaurus default theme */
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  /* docsaurus default theme - disesuaikan dengan warna biru */
+  --ifm-color-primary: #7fa6c8;
+  --ifm-color-primary-dark: #5d84a6;
+  --ifm-color-primary-darker: #507090;
+  --ifm-color-primary-darkest: #456377;
+  --ifm-color-primary-light: #8bb3d1;
+  --ifm-color-primary-lighter: #9bc0da;
+  --ifm-color-primary-lightest: #b8d0e6;
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-  --text-gray-color: #a0a0a0;
-  /* bangumi component */
-  --bbc-custom-text-base-color: #4c4948;
-  --bbc-custom-text-primary-color: #2fd8d8;
-  --bbc-custom-primary-color: #425aef;
-  /* tailwind theme */
-  --custom-color-primary: #af7ac5;
-  --custom-color-secondary: #91c4ee;
-  --custom-color-background: #ffffff;
-  --custom-color-surface: #fafafa;
-  --custom-color-outline: #dadde1;
-  --custom-color-light: #5e6687;
-  --custom-color-normal: #424242;
-  --custom-color-bold: #32325d;
+  --docusaurus-highlighted-code-line-bg: rgba(127, 166, 200, 0.2);
+
+  /* warna dari permintaan */
+  --bg: #0a0e14;
+  --surface: #11161f;
+  --fg: #e6edf5;
+  --muted: #8da0b5;
+  --light: #456377;
+  --border: rgba(127, 166, 200, 0.2);
+  --accent: #7fa6c8;
+  --accent-light: #5d84a6;
+  --accent-pale: rgba(127, 166, 200, 0.12);
+  --accent2: #8bb3d1;
+  --accent2-light: #507090;
+  --accent2-pale: rgba(139, 179, 209, 0.08);
+  --green: rgba(80, 168, 120, 0.9);
+  --green-pale: rgba(80, 168, 120, 0.12);
+  --green-border: rgba(80, 168, 120, 0.25);
+  --mono: 'Nunito', sans-serif;
+  --display: 'Kaisei Decol', serif;
+  --max: 1080px;
+  --pad: 1.5rem;
+  --radius: 24px;
+  --radius-sm: 14px;
+
+  /* bangumi component - disesuaikan dengan warna biru */
+  --bbc-custom-text-base-color: #e6edf5;
+  --bbc-custom-text-primary-color: #7fa6c8;
+  --bbc-custom-primary-color: #8bb3d1;
+
+  /* tailwind theme - disesuaikan dengan warna biru */
+  --custom-color-primary: #7fa6c8;
+  --custom-color-secondary: #8bb3d1;
+  --custom-color-background: #0a0e14;
+  --custom-color-surface: #11161f;
+  --custom-color-outline: #456377;
+  --custom-color-light: #8da0b5;
+  --custom-color-normal: #e6edf5;
+  --custom-color-bold: #ffffff;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* LIGHT MODE (aktif saat html punya attribute data-theme='light' atau body punya class .light-mode) */
+[data-theme='light'],
+body.light-mode {
+  /* docsaurus default theme - light mode dengan warna biru */
+  --ifm-color-primary: #7fa6c8;
+  --ifm-color-primary-dark: #5d84a6;
+  --ifm-color-primary-darker: #507090;
+  --ifm-color-primary-darkest: #3d5a73;
+  --ifm-color-primary-light: #8bb3d1;
+  --ifm-color-primary-lighter: #9bc0da;
+  --ifm-color-primary-lightest: #b8d0e6;
+  --docusaurus-highlighted-code-line-bg: rgba(127, 166, 200, 0.1);
+
+  /* warna dari permintaan - light mode */
+  --bg: #f4f6fa;
+  --surface: #ffffff;
+  --fg: #2c3e4e;
+  --muted: #7c8f9c;
+  --light: #b8c9d6;
+  --border: rgba(127, 166, 200, 0.25);
+  --accent: #7fa6c8;
+  --accent-light: #b8d0e6;
+  --accent-pale: rgba(127, 166, 200, 0.1);
+  --accent2: #8bb3d1;
+  --accent2-light: #c5ddef;
+  --accent2-pale: rgba(139, 179, 209, 0.08);
+  --green: rgba(80, 168, 120, 0.9);
+  --green-pale: rgba(80, 168, 120, 0.07);
+  --green-border: rgba(80, 168, 120, 0.28);
+
+  /* bangumi component - light mode */
+  --bbc-custom-text-base-color: #2c3e4e;
+  --bbc-custom-text-primary-color: #7fa6c8;
+  --bbc-custom-primary-color: #8bb3d1;
+
+  /* tailwind theme - light mode */
+  --custom-color-primary: #7fa6c8;
+  --custom-color-secondary: #b8d0e6;
+  --custom-color-background: #f4f6fa;
+  --custom-color-surface: #ffffff;
+  --custom-color-outline: #b8c9d6;
+  --custom-color-light: #7c8f9c;
+  --custom-color-normal: #2c3e4e;
+  --custom-color-bold: #1a2a38;
+}
+
+/* Untuk dark mode dengan attribute data-theme='dark' */
 [data-theme='dark'] {
-  /* docsaurus default theme */
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
-  --text-gray-color: #eee;
-  /* bangumi component */
-  --bbc-custom-text-base-color: #f7f7fa;
-  --bbc-custom-text-primary-color: #f2b94b;
-  --bbc-custom-primary-color: #2fd8d8;
-  /* tailwind theme */
-  --custom-color-primary: #9d8cbd;
-  --custom-color-secondary: #bddcf5;
-  --custom-color-background: #1e1e1e;
-  --custom-color-surface: #3c3c3c;
-  --custom-color-outline: #5a5b60;
-  --custom-color-light: #bcaaa4;
-  --custom-color-normal: #eeeeee;
-  --custom-color-bold: #f5f5f5;
+  /* docsaurus default theme - dark mode dengan warna biru */
+  --ifm-color-primary: #7fa6c8;
+  --ifm-color-primary-dark: #5d84a6;
+  --ifm-color-primary-darker: #507090;
+  --ifm-color-primary-darkest: #456377;
+  --ifm-color-primary-light: #8bb3d1;
+  --ifm-color-primary-lighter: #9bc0da;
+  --ifm-color-primary-lightest: #b8d0e6;
+  --docusaurus-highlighted-code-line-bg: rgba(127, 166, 200, 0.3);
+
+  /* warna dari permintaan - dark mode (sama seperti :root) */
+  --bg: #0a0e14;
+  --surface: #11161f;
+  --fg: #e6edf5;
+  --muted: #8da0b5;
+  --light: #456377;
+  --border: rgba(127, 166, 200, 0.2);
+  --accent: #7fa6c8;
+  --accent-light: #5d84a6;
+  --accent-pale: rgba(127, 166, 200, 0.12);
+  --accent2: #8bb3d1;
+  --accent2-light: #507090;
+  --accent2-pale: rgba(139, 179, 209, 0.08);
+  --green: rgba(80, 168, 120, 0.9);
+  --green-pale: rgba(80, 168, 120, 0.12);
+  --green-border: rgba(80, 168, 120, 0.25);
+
+  /* bangumi component - dark mode */
+  --bbc-custom-text-base-color: #e6edf5;
+  --bbc-custom-text-primary-color: #7fa6c8;
+  --bbc-custom-primary-color: #8bb3d1;
+
+  /* tailwind theme - dark mode */
+  --custom-color-primary: #7fa6c8;
+  --custom-color-secondary: #8bb3d1;
+  --custom-color-background: #0a0e14;
+  --custom-color-surface: #11161f;
+  --custom-color-outline: #456377;
+  --custom-color-light: #8da0b5;
+  --custom-color-normal: #e6edf5;
+  --custom-color-bold: #ffffff;
 }
 
 :root {
